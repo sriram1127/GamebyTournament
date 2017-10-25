@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration</title>
+</head>
+<body>
+	<table>
+		<thead>
+			<td align="center">Players</td>
+			<th>Name</th>
+			<th>Age</th>
+			<th>Email</th>
+		</thead>
+		<tbody style="margin-top: 50px;">
+			<tr id="r1" style="margin-top: 50px;">
+				<th align="center">
+					<div>Player 1</div>
+				</th>
+				<td>
+					<div>
+						<input type="text" id="name" />
+					</div>
+				</td>
+
+				<td>
+					<div>
+						<input type="number" id="age" />
+					</div>
+				</td>
+				<td>
+					<div>
+						<input type="email" id="email" />
+					</div>
+				</td>
+			</tr>
+			<tr id="r2">
+				<th align="center">
+					<div>Player 2</div>
+				</th>
+				<td>
+					<div>
+						<input type="text" id="name" />
+					</div>
+				</td>
+
+				<td>
+					<div>
+						<input type="number" id="age" />
+					</div>
+				</td>
+				<td>
+					<div>
+						<input type="email" id="email" />
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<button style="margin-left: 400px;" id="button">Register</button>
+	<script type="text/javascript">
+		$("button").click(function() {
+			$.ajax({
+				url : "register",
+				success : function(result) {
+					alert('Login successful');
+				}
+			});
+		});
+	</script>
+</body>
+</html>
